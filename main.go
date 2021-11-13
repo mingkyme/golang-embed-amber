@@ -17,7 +17,7 @@ func main(){
 	app := fiber.New(fiber.Config{
 		Views: engine,
 	})
-
+	engine.Debug(true)
     app.Get("/", func(c *fiber.Ctx) error {
         return c.Render("views/index",fiber.Map{})
     })
